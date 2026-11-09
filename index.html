@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>2027 AACRT 評分工作台</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="topbar"><div class="brand"><span class="brandmark">A</span><div><strong>2027 AACRT</strong><small>DEMO 操作示範</small></div></div><div class="top-actions"><span class="live"><i></i>瀏覽器示範</span><a class="button button-light" id="previewDownload" href="#previewDownload">下載評分 CSV</a></div></header>
+<main>
+  <section class="intro"><div><div class="eyebrow">評審委員會 · 評分系統</div><h1>口頭暨壁報論文評分</h1><p class="demo-notice">作品與範例分數皆為虛構。操作紀錄僅儲存在此瀏覽器，請使用虛構姓名及備註。</p><div class="search-options"><label class="search-condition"><span>搜尋條件 1</span><select id="searchField1"><option value="category">論文類別</option><option value="judge">評審姓名</option><option value="id">論文編號</option><option value="title">論文標題</option><option value="presenter">報告人</option><option value="membership">會員身分</option><option value="organization">醫院／學校</option></select><select id="searchValue1" aria-label="搜尋條件一的選項"><option value="">請選擇或不限</option></select></label><label class="search-condition"><span>搜尋條件 2</span><select id="searchField2"><option value="judge">評審姓名</option><option value="category">論文類別</option><option value="id">論文編號</option><option value="title">論文標題</option><option value="presenter">報告人</option><option value="membership">會員身分</option><option value="organization">醫院／學校</option></select><select id="searchValue2" aria-label="搜尋條件二的選項"><option value="">請選擇或不限</option></select></label></div></div><div class="summary-cards"><div><span>作品總數</span><b id="totalCount">—</b></div><div><span>已評作品</span><b id="scoredCount">—</b></div><div><span>評分筆數</span><b id="scoreCount">—</b></div></div></section>
+  <section class="toolbar"><div class="tabs" id="kindTabs"><button class="tab active" data-kind="all">全部作品</button><button class="tab" data-kind="oral">口頭報告</button><button class="tab" data-kind="foreign_oral">國外口頭</button><button class="tab" data-kind="poster">電子壁報</button></div></section>
+  <section class="workspace"><aside class="paper-panel"><div class="panel-head"><div><b>作品清單</b><small id="listCount">載入中</small></div><select id="groupFilter"><option value="all">所有評分組別</option></select></div><div id="paperList" class="paper-list"></div><div class="preview-head"><b id="previewTitle">作品內容</b><span id="previewPage">選取作品後顯示</span></div><div id="paperPreview" class="paper-preview"><div class="preview-placeholder">請從上方清單選取作品<br>檢視研討會論文內容</div></div></aside>
+  <section class="detail-panel" id="detailPanel"><div class="empty-state"><div class="empty-icon">✳</div><h2>選擇一篇作品開始評分</h2><p>請先在右側輸入評審姓名，再選取作品。</p></div></section></section>
+
+</main><div id="toast" class="toast"></div>
+<script src="./pages.js"></script>
+<script src="./app.js"></script>
+</body></html>
